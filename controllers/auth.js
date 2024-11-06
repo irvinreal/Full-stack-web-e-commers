@@ -8,13 +8,13 @@ const { validationResult } = require("express-validator");
 const User = require("../models/user");
 
 
-const transporter = nodemailer.createTransport(
-  sendgridTransport({
-    auth: {
-      api_key: // process.env.API_KEY, -> Insert API_KEY
-    },
-  }),
-);
+// const transporter = nodemailer.createTransport(
+//   sendgridTransport({
+//     auth: {
+//       api_key: // process.env.API_KEY, -> Insert API_KEY
+//     },
+//   }),
+// );
 
 exports.getLogin = (req, res, next) => {
   // const isLoggedIn = req.get('Cookie').trim().split('=')[1] === 'true'
