@@ -1,0 +1,5 @@
+<form style="width: fit-content; margin: 0" action="/cart" method="POST">
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+  <button class="btn bg-gray">Add to Cart</button>
+  <input type="hidden" name="productId" value="<%= product._id %>" />
+</form>

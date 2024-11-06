@@ -1,0 +1,48 @@
+<%- include('../includes/head.ejs')%>
+  </head>
+  <body>
+    <%- include('../includes/navigation.ejs')%>
+    <main>
+      <% if (errorMessage[0]) { %>
+        <div class="user-message user-message--error"><%= errorMessage %></div>
+      <% } %>
+      <form class="login-form" action="/signup" method="POST" novalidate>
+        <div class="form-control">
+          <label class="<%= validationErrors.find(e => e.path == 'email') ? 'invalid-label' : '' %>" for="email">E-mail</label>
+          <input
+            class="<%= validationErrors.find(e => e.path == 'email') ? 'invalid' : '' %>"
+            type="email"
+            name="email"
+            id="email"
+            value="<%= oldInput.email %>"
+          />
+        </div>
+        <div class="form-control">
+          <label class="<%= validationErrors.find(e => e.path == 'password') ? 'invalid-label' : '' %>" for="password">Password</label>
+          <input
+            class="<%= validationErrors.find(e => e.path == 'password') ? 'invalid' : '' %>"
+            type="password"
+            name="password"
+            id="password"
+            value="<%= oldInput.password %>"
+          />
+        </div>
+        <div class="form-control">
+          <label class="<%= validationErrors.find(e => e.path === 'confirmPassword') ? 'invalid-label' : '' %>" for="confirmPassword">Confirm Password</label>
+          <input
+            class="<%= validationErrors.find(e => e.path === 'confirmPassword') ? 'invalid' : '' %>"
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+            value="<%= oldInput.confirmPassword %>"
+          />
+        </div>
+
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+        
+        <div class="box-btn">
+          <button class="btn w-full py-2" type="submit">Signup</button>
+        </div>
+      </form>
+    </main>
+<%- include('../includes/end.ejs') %>

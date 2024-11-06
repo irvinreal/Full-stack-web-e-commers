@@ -1,0 +1,106 @@
+:root {
+  --main-color: #536369;
+  --secondary-color: #798a90ff;
+  --hard-color: #2c3c41ff;
+}
+
+* {
+  font-family: system-ui;
+}
+body {
+  background: rgb(34, 34, 34);
+  color: white;
+  margin: 0;
+  height: 100vh;
+}
+header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: var(--main-color);
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 3rem;
+}
+a {
+  text-decoration: none;
+  color: rgb(190, 190, 190);
+  transition: ease-out 0.2s;
+  &:hover,
+  &.active,
+  &:active {
+    color: white;
+  }
+}
+main {
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+.wm {
+  width: 60%;
+}
+.detail-image {
+  width: 400px;
+}
+
+.user-message {
+  margin: 1rem auto;
+  width: 30rem;
+  border: 1px solid #4771fa;
+  padding: 0.5rem;
+  border-radius: 3px;
+  background: #d8e1ffff;
+  text-align: center;
+  color: #4771fa;
+}
+
+.user-message--error {
+  border-color: red;
+  background: #ffc1c1ff;
+  color: red;
+}
+
+.pt-3 {
+  padding-top: 18px;
+}
+.pt-6 {
+  padding-top: 38px;
+}
+.p-2 {
+  padding: 5px 20px !important;
+}
+
+.login-btn {
+  background-color: var(--main-color) !important;
+
+  &:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--hard-color) !important;
+    color: var(--hard-color) !important;
+  }
+}
+
+.reset-btn {
+  background-color: #5363694a !important;
+  border: none !important;
+  color: #83969dff !important;
+
+  &:hover {
+    background-color: #53636977 !important;
+  }
+}

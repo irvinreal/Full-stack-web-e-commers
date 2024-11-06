@@ -1,0 +1,33 @@
+{
+  "name": "03-introduction-to-express",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^5.0.0",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-handlebars": "3.0",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.2.0",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.1",
+    "mysql2": "^3.10.0",
+    "nodemailer": "^6.9.15",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.3"
+  }
+}
