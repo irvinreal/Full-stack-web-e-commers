@@ -14,7 +14,7 @@
           <div class="card__image">
             <!-- https://studyfinds.org/wp-content/uploads/2022/12/IMG_0364-scaled.jpeg -->
             <img
-              src="<%= product.imageUrl %>"
+              src="/<%= product.imageUrl %>"
               alt="<%= product.title %>"
             />
           </div>
@@ -31,6 +31,7 @@
         </article>
         <% } %>
       </div>
+      <%- include('../includes/pagination.ejs', { currentPage, nextPage, previousPage, lastPage, hasNextPage, hasPreviousPage }) %>
       <% } else { %>
       <h1>No products found!</h1>
       <% } %>

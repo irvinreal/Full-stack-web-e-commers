@@ -19,3 +19,21 @@ li.order-item {
   border: 1px solid gray;
   padding: 4px 2rem;
 }
+
+.invoice_link {
+  color: #65de9dff;
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 10px;
+
+  &:hover {
+    color: #1eec7eff;
+  }
+}
+
+.relative {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}

@@ -14,35 +14,52 @@ article {
   place-content: center;
 }
 .card.product-item {
+  position: relative;
   background-color: gray;
   max-width: 290px;
-  padding: 20px 0;
+  padding-top: 20px;
   margin: 0 auto;
+  height: 390px;
 }
 .card__header {
   background-color: transparent;
+  height: fit-content;
+  h1 {
+    font-weight: 400;
+  }
 }
+
 .card__content {
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
+
+  h2 {
+    font-weight: 500;
+    font-size: 18px;
+  }
 }
 .card__image {
   position: relative;
-  height: 45%;
+  height: 40%;
   object-fit: cover;
-  display: inline-block;
+  object-position: center;
+  /* display: inline-block; */
   width: 100%;
+  max-height: 250px !important;
+  overflow: hidden;
 }
 .card__image > img {
   width: 100%;
   height: auto;
+  /* max-height: 200px; */
+
   /* max-height: 240px; */
-  object-fit: contain;
+  /* object-fit: contain; */
 }
 .product__title {
   text-align: center;
-  /* padding-top: 10px; */
+  padding-bottom: 8px;
   margin: 0;
 }
 .product-form {
@@ -56,6 +73,10 @@ article {
   align-items: center;
   height: 25px;
   gap: 10px;
+  width: 100%;
+
+  position: absolute;
+  bottom: 20px;
 }
 textarea {
   box-sizing: border-box;
@@ -83,6 +104,18 @@ textarea {
   width: 100%;
   border-radius: 6px;
 }
+.form-control input[type='file'] {
+  color: #979797ff;
+  font-size: 12px;
+}
+.form-control input[type='file']::-webkit-file-upload-button {
+  background-color: #313131ff;
+  color: #cfcfcfff;
+  font-size: 12px;
+  border: none;
+  height: 100%;
+}
+
 .btn-box {
   width: 100%;
   display: flex;
